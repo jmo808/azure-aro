@@ -68,7 +68,7 @@
         "location": "[parameters('location')]",
         "name": "[parameters('clusterName')]",
         "type": "Microsoft.ContainerService/openShiftManagedClusters",
-        "apiVersion": "2019-09-30-preview",
+        "apiVersion": "2019-10-27-preview",
         "properties": {
           "openShiftVersion": "v3.11",
           "networkProfile": {
