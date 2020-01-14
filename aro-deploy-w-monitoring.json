@@ -27,6 +27,24 @@
           "description": "The ID of an Azure Active Directory client application"
         }
       },
+      "vnetCidr": {
+          "type": "string",
+          "metadata": {
+              "description": "The Cidr for the cluster vNet"
+          }
+      },
+      "peerVnetId": {
+          "type": "string",
+          "metadata": {
+              "description": "The resource ID of the vNet to peer with"
+          }
+      },
+      "subnetCidr": {
+          "type": "string",
+          "metadata": {
+              "description": "The cidr for the cluster subnet"
+          }
+      },
       "aadClientSecret" : {
         "type":"securestring",
         "metadata": {
@@ -72,7 +90,8 @@
         "properties": {
           "openShiftVersion": "v3.11",
           "networkProfile": {
-            "vnetCidr": "10.0.0.0/8"
+            "vnetCidr": "[parameters('vnetCidr')]",
+            "peerVnetId": "[parameters('peerVnetId')]"
           },
           "authProfile": {
             "identityProviders": [
@@ -91,7 +110,7 @@
           "masterPoolProfile": {
             "name": "master",
             "count": 3,
-            "subnetCidr": "10.0.0.0/24",
+            "subnetCidr": "[parameters('subnetCidr')]",
             "vmSize": "Standard_D4s_v3",
             "osType": "Linux"
           },
@@ -100,7 +119,7 @@
               "role": "compute",
               "name": "compute",
               "count": 4,
-              "subnetCidr": "10.0.0.0/24",
+              "subnetCidr": "[parameters('subnetCidr')]",
               "vmSize": "Standard_D4s_v3",
               "osType": "Linux"
             },
@@ -108,7 +127,7 @@
               "role": "infra",
               "name": "infra",
               "count": 3,
-              "subnetCidr": "10.0.0.0/24",
+              "subnetCidr": "[parameters('subnetCidr')]",
               "vmSize": "Standard_D4s_v3",
               "osType": "Linux"
             }
