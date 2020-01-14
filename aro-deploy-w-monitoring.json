@@ -33,12 +33,6 @@
               "description": "The Cidr for the cluster vNet"
           }
       },
-      "peerVnetId": {
-          "type": "string",
-          "metadata": {
-              "description": "The resource ID of the vNet to peer with"
-          }
-      },
       "subnetCidr": {
           "type": "string",
           "metadata": {
@@ -90,8 +84,7 @@
         "properties": {
           "openShiftVersion": "v3.11",
           "networkProfile": {
-            "vnetCidr": "[parameters('vnetCidr')]",
-            "peerVnetId": "[parameters('peerVnetId')]"
+            "vnetCidr": "[parameters('vnetCidr')]"
           },
           "authProfile": {
             "identityProviders": [
