@@ -97,7 +97,7 @@
           "openShiftVersion": "v3.11",
           "networkProfile": {
             "vnetCidr": "[parameters('vnetCidr')]",
-             "managementSubnetCIDR": "[parameters('vnetCidr')]"
+             "managementSubnetCIDR": "[parameters('managementSubnetCidr')]"
           },
           "authProfile": {
             "identityProviders": [
