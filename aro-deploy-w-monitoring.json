@@ -121,6 +121,7 @@
             "osType": "Linux",
             "apiProperties": {
                 "privateApiServer": "[parameters('privateApiServer')]"
+            }
           },
           "agentPoolProfiles": [
             {
