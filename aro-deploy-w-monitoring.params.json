@@ -1,30 +1,42 @@
 {
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
-    "contentVersion": "1.0.0.0",
-    "parameters": {
-        "location": {
-            "value": "westcentralus"
-        },
-        "clusterName": {
-            "value": "REPL-CLUSTER-NAME"
-        },
-        "aadTenantId": {
-            "value": "REPL-ARO-TENANT"
-        },
-        "aadClientId": {
-            "value": "REPL-ARO-SP-APP-ID"
-        },
-        "aadClientSecret": {
-            "value": "REPL-ARO-SP-SECRET"
-        },
-        "aadCustomerAdminGroupId": {
-            "value": "REPL-ADMIN-GROUP-ID"
-        },
-        "logAnalyticsWorkspaceName": {
-            "value": "REPL-LOG-ANALYTICS-WKSP-NAME"
-        },
-        "logAnalyticsLocation": {
-          "value": "westus"
-        }
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "westcentralus"
+    },
+    "clusterName": {
+      "value": null
+    },
+    "aadTenantId": {
+      "value": null
+    },
+    "aadClientId": {
+      "value": null
+    },
+    "managementSubnetCidr": {
+      "value": null
+    },
+    "privateApiServer": {
+      "value": null
+    },
+    "vnetCidr": {
+      "value": null
+    },
+    "subnetCidr": {
+      "value": null
+    },
+    "aadClientSecret": {
+      "value": null
+    },
+    "aadCustomerAdminGroupId": {
+      "value": null
+    },
+    "logAnalyticsWorkspaceName": {
+      "value": null
+    },
+    "logAnalyticsLocation": {
+      "value": null
     }
+  }
 }
